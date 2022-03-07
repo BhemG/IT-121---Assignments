@@ -68,17 +68,16 @@
          decimal=decimal+bit*32;//add it, multiplied by the corresponding power of 2
 */
 
-			int i=0;
-			int power2=1;
-			int len=binaryString.length();
-			while (i<len)
-			{
-	         bit=binary%10;//get the last bit (6th)
- 	         decimal=decimal+bit*power2;//add it, multiplied by the corresponding power of 2
-  		      binary=binary/10;//get rid of the 6th bit, now the 5th bit is last
-				power2*=2;
-				i++;
-			}
+	int i=0;
+	int power2=1;
+	int len=binaryString.length();
+	while (i<len) {
+		bit=binary%10;//get the last bit (6th)
+		decimal=decimal+bit*power2;//add it, multiplied by the corresponding power of 2
+		binary=binary/10;//get rid of the 6th bit, now the 5th bit is last
+		power2*=2;
+		i++;
+	}
 
       	// Format output String
          String binaryOutput="Binary: " + binaryString;
